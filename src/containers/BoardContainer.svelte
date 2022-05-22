@@ -40,6 +40,7 @@
       <Cell
         on:click={() => handleToggle(cell.pos)}
         disabled={started}
+        position={cell.pos}
         alive={cell.alive}
       />
     {/each}
