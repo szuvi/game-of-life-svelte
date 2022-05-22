@@ -1,6 +1,6 @@
 <script>
-  export let alive = false;
-  export let disabled = false;
+  export let alive;
+  export let disabled;
   export let position;
   export let clickHandler;
 
