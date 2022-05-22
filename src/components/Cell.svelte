@@ -2,17 +2,17 @@
   export let alive = false;
   export let disabled = false;
   export let position;
-  // export let clickHandler;
+  export let clickHandler;
 
   $: color = alive ? "black" : "none";
   $: hoverBackground = disabled ? "none" : "black";
   $: cursor = disabled ? "default" : "pointer";
 
-  // const handleClick = () => clickHandler(position);
+  const handleClick = () => clickHandler(position);
 </script>
 
 <button
-  on:click
+  on:click={handleClick}
   {disabled}
   style="--color: {color}; --hoverBackground: {hoverBackground}; --cursor: {cursor}"
 />
