@@ -1,7 +1,7 @@
 <script>
   export let alive = false;
   export let disabled = false;
-  export let position;
+  // export let position;
   // export let clickHandler;
 
   $: color = alive ? "black" : "none";
