@@ -7,9 +7,10 @@
 
 <div
   style="
-    align-items: {center ? 'center' : 'stretch'}; 
-    grid-gap: {gap || '0rem'};
-    grid-template-columns: {gridColumns}"
+--align-items: {center ? 'center' : 'stretch'}; 
+--grid-gap: {gap || '0rem'};
+--grid-columns: {gridColumns}
+"
 >
   <slot />
 </div>
@@ -17,5 +18,8 @@
 <style>
   div {
     display: grid;
+    align-items: var(--align-items);
+    grid-gap: var(--grid-gap);
+    grid-template-columns: var(--grid-columns);
   }
 </style>

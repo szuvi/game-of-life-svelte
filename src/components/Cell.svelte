@@ -14,7 +14,7 @@
 <button
   on:click
   {disabled}
-  style="background: {color}; --hoverBackground: {hoverBackground}; --cursor: {cursor}"
+  style="--color: {color}; --hoverBackground: {hoverBackground}; --cursor: {cursor}"
 />
 
 <style>
@@ -22,6 +22,7 @@
     height: 2rem;
     width: 2rem;
     border: 1px solid black;
+    background: var(--color);
   }
 
   button:hover {
