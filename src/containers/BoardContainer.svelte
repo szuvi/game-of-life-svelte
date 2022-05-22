@@ -38,7 +38,7 @@
   <BoardGrid size={params.size}>
     {#each board as cell (cell.id)}
       <Cell
-        clickHandler={handleToggle}
+        on:click={() => handleToggle(cell.pos)}
         disabled={started}
         position={cell.pos}
         alive={cell.alive}
