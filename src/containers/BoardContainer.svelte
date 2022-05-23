@@ -10,12 +10,15 @@
   export let params;
   $: console.log("in boardcontainers ", params);
 
-  const game = GameOfLife(params.size);
+  let game;
   let board = [];
   let started = false;
   const gameSubscription = game.getBoardUpdates$();
 
-  onMount(() => (board = game.getState().flat()));
+  onMount(() => {
+    game = GameOfLife(params.size);
+    board = game.getState().flat();
+  });
 
   $: if ($gameSubscription) board = $gameSubscription;
 
