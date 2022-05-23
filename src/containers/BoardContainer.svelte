@@ -8,13 +8,14 @@
   import Cell from "../components/Cell.svelte";
 
   export let params;
+  $: console.log("in boardcontainers ", params);
 
   const game = GameOfLife(params.size);
   let board = [];
   let started = false;
   const gameSubscription = game.getBoardUpdates$();
 
-  // onMount(() => (board = game.getState().flat()));
+  onMount(() => (board = game.getState().flat()));
 
   $: if ($gameSubscription) board = $gameSubscription;
 
