@@ -13,14 +13,15 @@
   let game;
   let board = [];
   let started = false;
-  const gameSubscription = game.getBoardUpdates$();
+  let gameSubscription;
 
   onMount(() => {
     game = GameOfLife(params.size);
     board = game.getState().flat();
+    gameSubscription = game.getBoardUpdates$();
   });
 
-  $: if ($gameSubscription) board = $gameSubscription;
+  $: if (gameSubscription && $gameSubscription) board = $gameSubscription;
 
   const handleStart = () => {
     started = true;
