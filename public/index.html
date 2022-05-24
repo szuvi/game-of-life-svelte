@@ -7,7 +7,6 @@
     <title>Svelte app</title>
 
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/build/bundle.css" />
     <style>
       * {
         box-sizing: border-box;
@@ -21,6 +20,76 @@
       body {
         height: 100vh;
         width: 100vw;
+      }
+      div.svelte-xeeb4b {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+      }
+      .centered.svelte-xeeb4b {
+        margin: 0 auto;
+      }
+      .fullscreen.svelte-xeeb4b {
+        height: 100vh;
+        width: 100vw;
+      }
+      button.svelte-13bm354 {
+        font-size: 1.2rem;
+        background: none;
+        border: none;
+        padding: 0.2rem 0.7rem;
+        transition: 100ms;
+      }
+      button.svelte-13bm354:hover {
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+        box-shadow: 0 5px 6px -6px rgba(32, 33, 36, 0.28);
+      }
+      button.svelte-13bm354:active {
+        padding: 0.1rem 0.5rem;
+        box-shadow: 0 6px 7px -5px rgba(32, 33, 36, 0.28);
+      }
+      div.svelte-1tmwxnd {
+        display: grid;
+        grid-template-columns: repeat(var(--size), 1fr);
+        grid-template-rows: repeat(var(--size), 1fr);
+        grid-gap: 0.2rem;
+      }
+      input.svelte-uednvg {
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+        border: 1px solid rgb(223, 225, 229);
+        transition: all 0.05s;
+      }
+      input.svelte-uednvg:hover,
+      input.svelte-uednvg:active,
+      input.svelte-uednvg:focus,
+      input.svelte-uednvg:focus-within {
+        box-shadow: 0 5px 6px -6px rgba(32, 33, 36, 0.28);
+        outline: none;
+        border: 1px solid rgb(223, 225, 229);
+      }
+      button.svelte-1yndauu {
+        height: 2rem;
+        width: 2rem;
+        border: 1px solid black;
+        background: var(--color);
+      }
+      button.svelte-1yndauu:hover {
+        background: var(--hoverBackground);
+        opacity: 50%;
+        cursor: var(--cursor);
+      }
+      button.svelte-1yndauu:active {
+        opacity: 100%;
+      }
+      div.svelte-10l0m9x {
+        display: grid;
+        align-items: var(--align-items);
+        grid-gap: var(--grid-gap);
+        grid-template-columns: var(--grid-columns);
       }
     </style>
 
